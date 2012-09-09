@@ -1,28 +1,29 @@
-# node-statsd
+# node-dogstatsd
 
-A node.js client for [Etsy](http://etsy.com)'s [StatsD](https://github.com/etsy/statsd) server.
+A node.js client for extended StatsD server of [Datadog](http://www.datadoghq.com).
 
-This client will let you fire stats at your StatsD server from a node.js application.
+Datadog added new some features(histogram and tags) to their own StatsD implementation.
+This client is an extension of general StatsD client to work with that server.
 
-    % npm install node-statsd
+Most parts of codes came from [Steve Ivy](https://github.com/sivy)'s [node-statsd](https://github.com/sivy/node-statsd).
+I just added few lines to support datadog's histogram and tags features.
+
+The name of the package is changed because this isn't really statsd client and should be able to be used with original statsd client.
+
+    % npm install node-dogstatsd
     % node
-    > var StatsD = require('node-statsd').StatsD
+    > var StatsD = require('node-dogstatsd').StatsD
     > c = new StatsD('example.org',8125)
     { host: 'example.org', port: 8125 }
     > c.increment('node_test.int')
     > c.decrement('node_test.int')
     > c.timing('node_test.some_service.task.time', 500) // time in millis
+    > c.histogram('node_test.some_service.data', 100) // work only with datadog' StatsD
+    > c.increment('node_test.int', 1, ['tag:one']) // work only with datadog' StatsD
 
 ## License
 
 node-statsd is licensed under the MIT license.
-
-## Status
-
-**node-statsd** *should* run on modern nodes, and will soon be tested on 0.8 and 0.6.
-
-[![Build Status](https://secure.travis-ci.org/sivy/node-statsd.png?branch=master)](http://travis-ci.org/sivy/node-statsd)
-
 
 ## Error handling policy
 

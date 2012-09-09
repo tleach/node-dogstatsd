@@ -1,12 +1,12 @@
-{ "name" : "node-statsd"
-, "description" : "node client for Etsy'd StatsD server"
-, "version" : "0.0.2"
-, "author" : "Steve Ivy"
+{ "name" : "node-dogstatsd"
+, "description" : "node client for extended StatsD server of Datadog"
+, "version" : "0.0.1"
+, "author" : "Young Han Lee"
 , "repository" :
   { "type" : "git"
-  , "url" : "git://github.com/sivy/node-statsd.git"
+  , "url" : "git://github.com/joybro/node-dogstatsd.git"
   }
-, "bugs" : { "url" : "https://github.com/sivy/node-statsd/issues" }
+, "bugs" : { "url" : "https://github.com/joybro/node-dogstatsd/issues" }
 , "os" : [ "linux", "darwin", "freebsd" ]
 , "directories" : { "lib" : "./lib/" }
 , "main" : "./lib/statsd"
@@ -14,7 +14,7 @@
 , "dependencies" : { "mersenne" : "*" }
 , "licenses" :
   [ { "type" : "MIT"
-    , "url" : "http://github.com/sivy/node-stats/raw/master/LICENSE"
+    , "url" : "http://github.com/joybro/node-dogstatsd/raw/master/LICENSE"
     }   
   ]
 }

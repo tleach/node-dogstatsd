@@ -10,7 +10,6 @@
     "bugs" : {
         "url" : "https://github.com/joybro/node-dogstatsd/issues"
     },
-    "os" : [ "linux", "darwin", "freebsd" ],
     "directories" : {
         "lib" : "./lib/"
     },

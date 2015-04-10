@@ -18,8 +18,8 @@ The name of the package is changed because this isn't really statsd client and s
     > c.increment('node_test.int')
     > c.decrement('node_test.int')
     > c.timing('node_test.some_service.task.time', 500) // time in millis
-    > c.histogram('node_test.some_service.data', 100) // work only with datadog' StatsD
-    > c.increment('node_test.int', 1, ['tag:one']) // work only with datadog' StatsD
+    > c.histogram('node_test.some_service.data', 100) // works only with datadog' StatsD
+    > c.increment('node_test.int', 1, ['tag:one']) // works only with datadog' StatsD
 
 ## License
 

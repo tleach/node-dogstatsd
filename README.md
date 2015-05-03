@@ -16,7 +16,9 @@ The name of the package is changed because this isn't really statsd client and s
     > c = new StatsD('example.org',8125)
     { host: 'example.org', port: 8125 }
     > c.increment('node_test.int')
+    > c.incrementBy('node_test.int', 7)
     > c.decrement('node_test.int')
+    > c.decrementBy('node_test.int', 12)
     > c.timing('node_test.some_service.task.time', 500) // time in millis
     > c.histogram('node_test.some_service.data', 100) // works only with datadog' StatsD
     > c.increment('node_test.int', 1, ['tag:one']) // works only with datadog' StatsD
